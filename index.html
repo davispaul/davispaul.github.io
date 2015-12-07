@@ -50,11 +50,13 @@
             playerVars: {
                 start: 85,
           autoplay: 1,
-          controls: 1,
+                
+          controls: 0,
           disablekb: 1,
           hl: 'ru-ru',
           loop: 1,
           modestbranding: 1,
+                
           showinfo: 0,
           autohide: 1,
           color: 'white',
@@ -72,6 +74,7 @@
       // 4. The API will call this function when the video player is ready.<iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/6v2L2UGZJAM?rel=0&amp;controls=0&start=38&autoplay=1" frameborder="0" allowfullscreen mute=1></iframe>
     
       function onPlayerReady(event) {
+          player.mute();
         event.target.playVideo();
       }
 
@@ -97,10 +100,7 @@
     
 </div>    
     
-    <script>
-       document.getElementById('bgvid').currentTime = 38;
-        
-   </script> 
+   
     
     <div id="logo">
     <img src="dp_logo.png" width="200">

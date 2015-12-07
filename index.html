@@ -1,7 +1,32 @@
 <!DOCTYPE html>
 <html>
+    <head><style>
+        video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(dp_logo.png) no-repeat;
+    background-size: cover; 
+}
+        </style></head>
+    
 <center><body bgcolor="#333333">
 
-    <img src="dp_logo.png">
+<video autoplay loop poster="dp_logo.png" id="bgvid">
+    <source src="nature.webm" type="video/webm">
+    <source src="nature.mp4" type="video/mp4">
+</video>    
+    
+    <script>
+       document.getElementById('bgvid').currentTime = 38;
+   </script> 
+    
 </body></center>
 </html>

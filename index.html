@@ -16,8 +16,11 @@
     background-size: cover; 
 }
         div#logo{
-            vertical-align: baseline
-            width: 23;
+            position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
         }
         
         </style></head>
@@ -45,7 +48,7 @@
           width: '1280',
           videoId: '6v2L2UGZJAM',
             playerVars: {
-                start: 38,
+                start: 85,
           autoplay: 1,
           controls: 1,
           disablekb: 1,
@@ -79,7 +82,7 @@
       function onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.PLAYING && !done) {
             
-          setTimeout(stopVideo, 60000);
+          setTimeout(stopVideo, 600000);
           done = true;
         }
       }
